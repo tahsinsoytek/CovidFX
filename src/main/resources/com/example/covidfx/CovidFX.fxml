@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="950.0" prefWidth="1200.0" style="-fx-background-color: beige;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.covidfx.Controller">
+   <children>
+      <JFXButton layoutX="834.0" layoutY="41.0" onAction="#getDataBtn" style="-fx-background-color: gray; -fx-background-radius: 25;" text="Get Data" textFill="#862828">
+         <font>
+            <Font name="Bodoni MT" size="32.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="14.0" layoutY="44.0" text="Dateset URL:" textFill="#6b6b6b">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtField" layoutX="234.0" layoutY="44.0" prefHeight="55.0" prefWidth="577.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
+      <JFXListView fx:id="jfxlistView" layoutX="34.0" layoutY="124.0" prefHeight="567.0" prefWidth="213.0" />
+      <Label fx:id="txtLabel" layoutX="330.0" layoutY="155.0">
+         <font>
+            <Font name="Century Gothic" size="42.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="lineChart" createSymbols="false" layoutX="263.0" layoutY="111.0" prefHeight="817.0" prefWidth="925.0" style="-fx-background-color: beige;">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT"  />
+        </yAxis>
+      </LineChart>
+      <JFXButton fx:id="selectButton" layoutX="34.0" layoutY="727.0" onAction="#selectPressed" prefHeight="87.0" prefWidth="213.0" style="-fx-background-color: gray; -fx-background-radius: 30;" text="Select" textFill="#862828">
+         <font>
+            <Font name="Times New Roman" size="49.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="selectButton1" layoutX="34.0" layoutY="841.0" onAction="#clearPressed" prefHeight="87.0" prefWidth="213.0" style="-fx-background-color: gray; -fx-background-radius: 30;" text="Clear" textFill="#862828">
+         <font>
+            <Font name="Times New Roman" size="49.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
